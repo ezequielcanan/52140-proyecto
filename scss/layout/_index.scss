@@ -1,0 +1,81 @@
+.section-two {
+    background-color: $bg-light;
+    margin: 0;
+
+    .container-cards-pcs {
+        justify-content: space-around;
+        padding: $lg;
+        margin: 0;
+
+        .card-inicio-pc {
+            transition: all .3s ease;
+            &:hover {
+                border: 1px #333 solid;
+            }
+            .precio-card {
+                padding: 12px;
+                font-size: $sm;
+                background-color: $bg-blue;
+                text-decoration: none;
+                color: $bg-white;
+                border-radius: .4em;
+                transition: all $sec-md ease;
+                &:hover {
+                    background-color: #1b9fb6;
+                    color: $bg-white;
+                }
+                &:active {
+                    background-color: #3edf74;
+                }
+            }
+        }
+    }
+}
+
+.container__puntos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container__puntos__punto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 210px;
+    padding: 40px 20px;
+    border: 2px #0a4e97 solid;
+    border-radius: 50%;
+    transition: all .4s ease;
+}
+
+.container__puntos__punto:hover {
+    border-color: #1b9fb6;
+}
+
+.container__puntos__punto i{
+    color: #333;
+    font-size: 20px;
+    border: 1px #333 solid;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.container__puntos__punto h3{
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px #333 solid;
+    text-align: center;
+    width: 80%;
+}
+
+.container__puntos__punto p{
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}

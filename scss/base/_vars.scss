@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+
+/*Colores*/
+$bg-dark: #222831;
+$bg-white: #fff;
+$bg-light: #eeeeee;
+$bg-gray: #393e46;
+$bg-green: #32e0c4;
+$bg-blue: #0e91e9;
+$bg-l-green: #0cf159;
+
+
+
+/*Fuente*/
+$main-font: 'Golos-text', sans-serif;
+
+/*Tamaños*/
+$sm: 18px;
+$md: 24px;
+$lg: 32px;
+$xl: 40px;
+
+/*Segundos*/
+$sec-md: .3s;
+
+$botones: (
+    primary: blue
+);
