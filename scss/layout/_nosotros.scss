@@ -1,0 +1,34 @@
+.container-texto-nosotros {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color__three);
+}
+
+.texto-nosotros {
+    padding: 20px;
+}
+
+.texto-nosotros h2 {
+    font-size: 30px;
+    color: #000;
+}
+
+.texto-nosotros p {
+    font-size: 24px;
+}
+
+.container-img-article {
+    width: 100%;
+}
+
+.container-img-article img{
+    width: 100%;
+    border-radius: 1em;
+    border: 2px #222 solid;
+}
+
+.container-texto2-nosotros {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color__two);
+}

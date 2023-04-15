@@ -1,16 +1,16 @@
 .section-two {
     background-color: $bg-light;
     margin: 0;
-
+    
     .container-cards-pcs {
         justify-content: space-around;
         padding: $lg;
         margin: 0;
-
+        
         .card-inicio-pc {
-            transition: all .3s ease;
+            transition: all $sec-md ease;
             &:hover {
-                border: 1px #333 solid;
+                @include border(1px, $bg-d-gray);
             }
             .precio-card {
                 padding: 12px;
@@ -21,61 +21,53 @@
                 border-radius: .4em;
                 transition: all $sec-md ease;
                 &:hover {
-                    background-color: #1b9fb6;
+                    background-color: $bg-l-blue;
                     color: $bg-white;
                 }
                 &:active {
-                    background-color: #3edf74;
+                    background-color: $bg-l-green;
                 }
             }
         }
     }
-}
-
-.container__puntos {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.container__puntos__punto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 210px;
-    height: 210px;
-    padding: 40px 20px;
-    border: 2px #0a4e97 solid;
-    border-radius: 50%;
-    transition: all .4s ease;
-}
-
-.container__puntos__punto:hover {
-    border-color: #1b9fb6;
-}
-
-.container__puntos__punto i{
-    color: #333;
-    font-size: 20px;
-    border: 1px #333 solid;
-    padding: 7px;
-    border-radius: 50%;
-}
-
-.container__puntos__punto h3{
-    font-size: 24px;
-    color: #333;
-    border-bottom: 2px #333 solid;
-    text-align: center;
-    width: 80%;
-}
-
-.container__puntos__punto p{
-    color: #333;
-    font-size: 14px;
-    text-align: center;
+    .container__puntos {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1;
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+        &__punto {
+            @include flex-column(center,center,auto);
+            width: 210px;
+            height: 210px;
+            padding: 40px 20px;
+            @include border(2px,#0a4e97,50%);
+            transition: all $sec-md ease;
+            &:hover {
+                border-color: $bg-l-blue;
+            }
+            
+            i {
+                color: $bg-d-gray;
+                font-size: $sm;
+                @include border(1px,$bg-d-gray,50%);
+                padding: 7px;
+            }
+            
+            h3 {
+                font-size: $md;
+                color: $bg-d-gray;
+                @include border(2px,$bg-d-gray,$lados: bottom);
+                text-align: center;
+                width: 80%;
+            }
+            
+            p {
+                color: $bg-d-gray;
+                font-size: $xs;
+                text-align: center;
+            }
+        }
+    }
 }

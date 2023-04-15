@@ -10,7 +10,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Golos-text", sans-serif;
-} /*Components*/
+}
+
+/*Components*/
 .navbar-expand-md {
   background-color: #393e46;
 }
@@ -33,6 +35,62 @@
   color: #eeeeee !important;
 }
 
+footer {
+  display: grid;
+  grid-template-columns: 208px 120px 80px 208px 78px;
+  grid-template-rows: 1fr;
+  align-items: start;
+  justify-content: space-evenly;
+  padding: 50px;
+  background-color: #222831;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul .no-link {
+  color: #32e0c4;
+}
+footer .seccion-logo .logo-footer {
+  width: 124px;
+  height: 124px;
+  border-radius: 1.5em;
+}
+footer .seccion-logo ul {
+  padding-top: 20px;
+}
+footer .seccion-logo ul li {
+  color: #32e0c4;
+}
+footer .seccion-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+footer .seccion-footer h4 {
+  color: #fff;
+  border-bottom: 2px #fff solid;
+  border-radius: auto;
+  align-self: flex-start;
+}
+footer .seccion-footer .a-footer {
+  text-decoration: none;
+  color: #32e0c4;
+  transition: all 0.4s ease;
+}
+footer .seccion-footer .a-footer:hover {
+  color: #0e91e9;
+}
+footer .seccion-footer .redes-botones a i {
+  color: #32e0c4;
+  transition: all 0.4s ease;
+}
+footer .seccion-footer .redes-botones a i:hover {
+  color: #0e91e9;
+}
+
 /*Layout*/
 .section-two {
   background-color: #eeeeee;
@@ -44,10 +102,11 @@
   margin: 0;
 }
 .section-two .container-cards-pcs .card-inicio-pc {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .section-two .container-cards-pcs .card-inicio-pc:hover {
   border: 1px #333 solid;
+  border-radius: auto;
 }
 .section-two .container-cards-pcs .card-inicio-pc .precio-card {
   padding: 12px;
@@ -56,17 +115,16 @@
   text-decoration: none;
   color: #fff;
   border-radius: 0.4em;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .section-two .container-cards-pcs .card-inicio-pc .precio-card:hover {
   background-color: #1b9fb6;
   color: #fff;
 }
 .section-two .container-cards-pcs .card-inicio-pc .precio-card:active {
-  background-color: #3edf74;
+  background-color: #0cf159;
 }
-
-.container__puntos {
+.section-two .container__puntos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1;
@@ -74,12 +132,12 @@
   align-items: center;
   padding: 20px;
 }
-
-.container__puntos__punto {
+.section-two .container__puntos__punto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: auto;
   width: 210px;
   height: 210px;
   padding: 40px 20px;
@@ -87,102 +145,30 @@
   border-radius: 50%;
   transition: all 0.4s ease;
 }
-
-.container__puntos__punto:hover {
+.section-two .container__puntos__punto:hover {
   border-color: #1b9fb6;
 }
-
-.container__puntos__punto i {
+.section-two .container__puntos__punto i {
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   border: 1px #333 solid;
-  padding: 7px;
   border-radius: 50%;
+  padding: 7px;
 }
-
-.container__puntos__punto h3 {
+.section-two .container__puntos__punto h3 {
   font-size: 24px;
   color: #333;
   border-bottom: 2px #333 solid;
+  border-radius: auto;
   text-align: center;
   width: 80%;
 }
-
-.container__puntos__punto p {
+.section-two .container__puntos__punto p {
   color: #333;
   font-size: 14px;
   text-align: center;
 }
 
-/* FOOTER */
-footer {
-  display: grid;
-  grid-template-columns: 208px 120px 80px 208px 78px;
-  grid-template-rows: 1fr;
-  justify-content: center;
-  align-items: start;
-  align-content: start;
-  justify-content: space-evenly;
-  padding: 50px;
-  background-color: var(--color__four);
-}
-
-footer section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.seccion-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.a-footer {
-  text-decoration: none;
-  color: var(--color__two);
-  transition: all 0.4s ease;
-}
-
-.logo-footer {
-  width: 124px;
-  height: 124px;
-  border-radius: 1.5em;
-}
-
-.seccion-logo ul li {
-  color: var(--color__two);
-}
-
-.seccion-footer h4 {
-  color: #fff;
-  border-bottom: 2px #fff solid;
-  align-self: flex-start;
-}
-
-.seccion-logo ul {
-  padding-top: 20px;
-}
-
-.a-footer:hover {
-  color: #0e91e9;
-}
-
-.no-link {
-  color: var(--color__two);
-}
-
-.redes-botones a i {
-  color: var(--color__two);
-  transition: all 0.4s ease;
-}
-
-.redes-botones a i:hover {
-  color: #0e91e9;
-}
-
-/*CONTACTO*/
 .main-form {
   padding: 0;
 }
@@ -234,7 +220,6 @@ footer section ul {
   background-color: #0e91e9;
 }
 
-/*COMPONENTES*/
 .container-componentes {
   display: flex;
   flex-direction: column;
@@ -302,7 +287,6 @@ footer section ul {
   font-size: 24px;
 }
 
-/*TIENDA PCS*/
 .container-tienda {
   background-color: var(--color__three);
 }
@@ -343,7 +327,6 @@ footer section ul {
   background-color: #0d83d2;
 }
 
-/*NOSOTROS*/
 .container-texto-nosotros {
   display: flex;
   flex-direction: column;
@@ -379,7 +362,6 @@ footer section ul {
   background-color: var(--color__two);
 }
 
-/*MEDIA RESPONSIVE*/
 @media screen and (max-width: 991px) {
   .container__puntos {
     grid-template-columns: repeat(2, 1fr);

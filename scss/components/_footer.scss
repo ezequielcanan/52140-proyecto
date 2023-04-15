@@ -1,0 +1,62 @@
+footer {
+    display: grid;
+    grid-template-columns: 208px 120px 80px 208px 78px;
+    grid-template-rows: 1fr;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 50px;
+    background-color: $bg-dark;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        .no-link {
+            color: $bg-green;
+        }
+    }
+    
+    .seccion-logo {
+        .logo-footer {
+            @include size(124px,124px);
+            border-radius: 1.5em;
+        }
+        ul {
+            padding-top: 20px;
+            
+            li {
+                color: $bg-green
+            }
+        }
+    }
+    
+    .seccion-footer {
+        @include flex-column(center,center);
+        
+        h4 {
+            color: $bg-white;
+            @include border(2px, $bg-white, $lados:bottom);
+            align-self: flex-start;
+        }
+        
+        .a-footer {
+            text-decoration: none;
+            color: $bg-green;
+            transition: all $sec-md ease;
+            &:hover {
+                color: $bg-blue;
+            }
+        }
+        
+        .redes-botones {
+            a {
+                i {
+                    color: $bg-green;
+                    transition: all $sec-md ease;
+                    &:hover {
+                        color: $bg-blue;
+                    }
+                }
+            }
+        }
+    }
+}
