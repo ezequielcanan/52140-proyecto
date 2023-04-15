@@ -1,4 +1,10 @@
-@mixin flex-column($justify, $align, $gap:0) {
+@mixin media-query($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints,$breakpoint)){
+        @content;
+    }
+}
+
+@mixin flex-column($justify, $align:auto, $gap:0) {
     display: flex;
     flex-direction: column;
     justify-content: $justify;
@@ -18,7 +24,7 @@
     }
 }
 
-@mixin size($width,$height) {
+@mixin size($width:auto,$height:auto) {
     width: $width;
     height: $height;
 }

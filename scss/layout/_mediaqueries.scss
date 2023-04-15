@@ -1,27 +1,162 @@
-@media screen and (max-width: 991px) {
 
-    .container__puntos {
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: 
-        "garantia service"
-        "calidad calidad";
-    }
+// /*CONTACTO*/
 
-    .garantia {
-        grid-area: garantia;
-    }
 
-    .service {
-        grid-area: service;
-    }
 
-    .calidad {
-        grid-area: calidad;
-    }
+// /*COMPONENTES*/
 
+// .container-galeria {
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-template-rows: auto;
+//     grid-template-areas: 
+//     "asus aorus"
+//     "giga giga"
+//     "intel amd"
+//     "nvidia nvidia";
+// }
+
+// .img-marca {
+//     filter: grayscale(0);
+// }
+
+// /*TIENDA PCS*/
+
+// .aside-tienda {
+//     display: grid;
+//     grid-template-columns: repeat(3,1fr);
+//     grid-template-rows: auto;
+//     grid-template-areas: 
+//     "titulo titulo titulo"
+//     "cpu mother ram";
+//     justify-items: center;
+//     align-content: center;
+//     padding-bottom: 30px;
+// }
+
+// .container-filtro ul{
+//     padding: 0;
+// }
+
+// .container-header-aside {
+//     grid-area: titulo;
+// }
+
+// .cpu-filtro {
+//     grid-area: cpu;
+// }
+
+// .mother-filtro {
+//     grid-area: mother;
+// }
+
+// .ram-filtro {
+//     grid-area: ram;
+// }
+
+
+// /*767px de max-width para que el navbar no tenga mal diseño en el pixel exacto 768*/
+// @media screen and (max-width: 767px) {
+//     .navbar-nav {
+//         gap: 0;
+//     }
+    
+//     .boton-enviar {
+//         align-self: flex-end;
+//     }
+    
+//     .form-control {
+//         width: 100%;
+//     }
+    
+//     /*TIENDA PCS*/
+    
+//     .aside-tienda {
+//         grid-template-columns: 1fr;
+//         grid-template-areas: 
+//         "titulo"
+//         "cpu"
+//         "mother"
+//         "ram";
+//     }
+    
+//     /*NOSOTROS*/
+    
+//     .texto-nosotros h2 {
+//         font-size: 24px;
+//     }
+    
+//     .texto-nosotros p {
+//         font-size: 18px;
+//     }
+    
+// }
+
+// @media screen and (max-width: 600px) {
+    
+//     .container__puntos {
+//         grid-template-columns: 1fr;
+//         grid-template-rows: repeat(3,1fr);
+//         grid-template-areas: 
+//         "garantia"
+//         "service"
+//         "calidad";
+//         gap: 30px;
+//     }
+    
+//     /*CONTACTO*/
+//     .icon-envelope {
+//         font-size: 200px;
+//     }
+    
+//     /*COMPONENTES*/
+    
+//     .container-galeria {
+//         grid-template-columns: 1fr;
+//         grid-template-areas: 
+//         "asus"
+//         "aorus"
+//         "giga"
+//         "intel"
+//         "amd"
+//         "nvidia";
+//     }
+    
+//     .container-parrafo-componentes p{
+//         font-size: 18px;
+//     }
+    
+// }
+
+// @media screen and (max-width: 480px) {
+//     footer {
+//         grid-template-columns: 1fr;
+//         grid-template-rows: auto;
+//         align-content: center;
+//         grid-template-areas: 
+//         "logo"
+//         "categorias"
+//         "marcas"
+//         "contacto"
+//         "redes";
+//     }
+    
+//     /*CONTACTO*/
+//     .icon-envelope {
+//         font-size: 150px;
+//     }
+    
+//     .boton-enviar {
+//         align-self: center;
+//     }
+    
+// }
+
+
+/*992 PIXELES*/
+@include media-query(large) {
+    /*Footer*/
     footer {
-        grid-template-columns: 40% 40%;
+        grid-template-columns: 40% 40% !important;
         grid-template-rows: auto;
         align-content: center;
         gap: 30px;
@@ -30,190 +165,66 @@
         "categorias marcas"
         "contacto redes";
         padding: 60px 0;
+        ul {
+            li {
+                text-align: center;
+            }
+        }
+        .seccion-logo {
+            grid-area: logo;
+            justify-self: center;
+            text-align: center;
+        }
+        .seccion-footer {
+            h4 {
+                align-self: center;
+            }
+            ul {
+                li {
+                    text-align: center;
+                }
+            }
+            .categorias-footer {
+                grid-area: categorias;
+            }
+            .marcas-footer {
+                grid-area: marcas;
+            }
+            .contacto-footer {
+                grid-area: contacto;
+            }
+            .redes-footer {
+                grid-area: redes;
+            }
+        }
     }
 
-    .seccion-logo {
-        grid-area: logo;
-        justify-self: center;
-        text-align: center;
+    /*Index*/
+    .section-two {
+        .container__puntos {
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-template-areas: 
+            "garantia service"
+            "calidad calidad";
+            .garantia {
+                grid-area: garantia;
+            }
+            
+            .service {
+                grid-area: service;
+            }
+            
+            .calidad {
+                grid-area: calidad;
+            }
+        }
     }
-
-    .categorias-footer {
-        grid-area: categorias;
+    /*Contacto*/
+    .main-form {
+        .container-forms {
+            height: auto;
+        }
     }
-
-    .marcas-footer {
-        grid-area: marcas;
-    }
-
-    .contacto-footer {
-        grid-area: contacto;
-    }
-
-    .redes-footer {
-        grid-area: redes;
-    }
-
-    .seccion-footer h4{
-        align-self: center;
-    }
-
-    .seccion-footer ul li{
-        text-align: center;
-    }
-
-    /*CONTACTO*/
-
-    .container-forms {
-        height: auto;
-    }
-
-    /*COMPONENTES*/
-
-    .container-galeria {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "asus aorus"
-        "giga giga"
-        "intel amd"
-        "nvidia nvidia";
-    }
-
-    .img-marca {
-        filter: grayscale(0);
-    }
-
-    /*TIENDA PCS*/
-
-    .aside-tienda {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "titulo titulo titulo"
-        "cpu mother ram";
-        justify-items: center;
-        align-content: center;
-        padding-bottom: 30px;
-    }
-
-    .container-filtro ul{
-        padding: 0;
-    }
-
-    .container-header-aside {
-        grid-area: titulo;
-    }
-
-    .cpu-filtro {
-        grid-area: cpu;
-    }
-
-    .mother-filtro {
-        grid-area: mother;
-    }
-
-    .ram-filtro {
-        grid-area: ram;
-    }
-
 }
 
-
-/*767px de max-width para que el navbar no tenga mal diseño en el pixel exacto 768*/
-@media screen and (max-width: 767px) {
-    .navbar-nav {
-        gap: 0;
-    }
-
-    .boton-enviar {
-        align-self: flex-end;
-    }
-
-    .form-control {
-        width: 100%;
-    }
-
-    /*TIENDA PCS*/
-
-    .aside-tienda {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "titulo"
-        "cpu"
-        "mother"
-        "ram";
-    }
-
-    /*NOSOTROS*/
-    
-    .texto-nosotros h2 {
-        font-size: 24px;
-    }
-    
-    .texto-nosotros p {
-        font-size: 18px;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-
-    .container__puntos {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3,1fr);
-        grid-template-areas: 
-        "garantia"
-        "service"
-        "calidad";
-        gap: 30px;
-    }
-
-    /*CONTACTO*/
-    .icon-envelope {
-        font-size: 200px;
-    }
-
-    /*COMPONENTES*/
-
-    .container-galeria {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "asus"
-        "aorus"
-        "giga"
-        "intel"
-        "amd"
-        "nvidia";
-    }
-
-    .container-parrafo-componentes p{
-        font-size: 18px;
-    }
-
-}
-
-@media screen and (max-width: 480px) {
-    footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        align-content: center;
-        grid-template-areas: 
-        "logo"
-        "categorias"
-        "marcas"
-        "contacto"
-        "redes";
-    }
-
-    /*CONTACTO*/
-    .icon-envelope {
-        font-size: 150px;
-    }
-
-    .boton-enviar {
-        align-self: center;
-    }
-
-}

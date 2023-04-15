@@ -26,3 +26,12 @@ $xl: 40px;
 /*Segundos*/
 $sec-sm: .1s;
 $sec-md: .4s;
+
+/*Breakpoints*/
+
+$breakpoints: (
+    large: 991px,
+    medium: 767px,
+    small: 600px,
+    xsmall: 480px
+);
