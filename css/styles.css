@@ -6,11 +6,64 @@
 /*Tamaños*/
 /*Segundos*/
 /*Breakpoints*/
+/*Buttons*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Golos-text", sans-serif;
+}
+
+/*Buttons*/
+.btn-primary {
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #0e91e9;
+  width: 100px;
+  height: auto;
+  padding: 10px 20px;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #0b73b9;
+}
+.btn-primary:active {
+  transform: scale(0.94);
+}
+
+.btn-buy {
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #24b024;
+  width: 100px;
+  height: auto;
+  padding: 10px 20px;
+  color: #fff;
+}
+.btn-buy:hover {
+  background-color: #1b861b;
+}
+.btn-buy:active {
+  transform: scale(0.94);
+}
+
+.btn-danger {
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #f10c0c;
+  width: 100px;
+  height: auto;
+  padding: 10px 20px;
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: #c00a0a;
+}
+.btn-danger:active {
+  transform: scale(0.94);
 }
 
 /*Components*/
@@ -109,22 +162,6 @@ footer .seccion-footer .redes-botones a i:hover {
   border: 1px #333 solid;
   border-radius: auto;
 }
-.section-two .container-cards-pcs .card-inicio-pc .precio-card {
-  padding: 12px;
-  font-size: 18px;
-  background-color: #0e91e9;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 0.4em;
-  transition: all 0.4s ease;
-}
-.section-two .container-cards-pcs .card-inicio-pc .precio-card:hover {
-  background-color: #1b9fb6;
-  color: #fff;
-}
-.section-two .container-cards-pcs .card-inicio-pc .precio-card:active {
-  background-color: #0cf159;
-}
 .section-two .container__puntos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -176,9 +213,8 @@ footer .seccion-footer .redes-botones a i:hover {
 .main-form .container-forms {
   justify-content: center;
   align-items: center;
-  background-color: var(--color__three);
+  background-color: #eeeeee;
   padding: 30px;
-  margin: 0;
   margin: 0;
 }
 .main-form .container-forms .icon-envelope {
@@ -206,15 +242,6 @@ footer .seccion-footer .redes-botones a i:hover {
 .main-form .container-forms .container-input-forms .lista-form .form-control:focus {
   box-shadow: 4px 4px 5px 0px #10af97;
   border-color: #10af97;
-}
-.main-form .container-forms .container-input-forms .boton-enviar {
-  width: 100px;
-  height: auto;
-  color: #fff;
-  background-color: #0e91e9;
-}
-.main-form .container-forms .container-input-forms .boton-enviar:hover {
-  background-color: #1b9fb6;
 }
 
 .container-componentes {

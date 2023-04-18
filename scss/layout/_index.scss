@@ -12,22 +12,6 @@
             &:hover {
                 @include border(1px, $bg-d-gray);
             }
-            .precio-card {
-                padding: 12px;
-                font-size: $sm;
-                background-color: $bg-blue;
-                text-decoration: none;
-                color: $bg-white;
-                border-radius: .4em;
-                transition: all $sec-md ease;
-                &:hover {
-                    background-color: $bg-l-blue;
-                    color: $bg-white;
-                }
-                &:active {
-                    background-color: $bg-l-green;
-                }
-            }
         }
     }
     .container__puntos {

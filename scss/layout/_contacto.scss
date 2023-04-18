@@ -4,15 +4,14 @@
     .container-forms {
         justify-content: center;
         align-items: center;
-        background-color: var(--color__three);
+        background-color: $bg-light;
         padding: 30px;
-        margin: 0;
         margin: 0;
         
         .icon-envelope {
             font-size: 270px;
             text-align: center;
-            color: #0e91e9;
+            color: $bg-blue;
         }
         
         .container-input-forms {
@@ -30,15 +29,6 @@
                         box-shadow: 4px 4px 5px 0px #10af97;
                         border-color: #10af97;
                     }
-                }
-            }
-            
-            .boton-enviar {
-                @include size(100px);
-                color: $bg-white;
-                background-color: $bg-blue;
-                &:hover {
-                    background-color: $bg-l-blue;
                 }
             }
         }
