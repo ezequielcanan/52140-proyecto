@@ -247,143 +247,123 @@ footer .seccion-footer .redes-botones a i:hover {
 .container-componentes {
   display: flex;
   flex-direction: column;
+  justify-content: auto;
   align-items: center;
-  background-color: #dfdfdf;
+  gap: 0;
+  background-color: #eeeeee;
 }
-
-.container-galeria {
+.container-componentes .container-galeria {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   grid-template-areas: "asus asus amd" "intel giga giga" "nvidia nvidia aorus";
 }
-
-.container-img-marca {
+.container-componentes .container-galeria .container-img-marca {
   width: 100%;
+  height: auto;
   min-height: 400px;
   max-height: 100%;
 }
-
-.img-marca {
+.container-componentes .container-galeria .container-img-marca .img-marca {
   object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: 100%;
   filter: grayscale(85%);
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   border-radius: 0.5em;
 }
-
-.img-marca:hover {
+.container-componentes .container-galeria .container-img-marca .img-marca:hover {
   filter: grayscale(0);
 }
-
-.asus {
+.container-componentes .container-galeria .asus {
   grid-area: asus;
 }
-
-.amd {
+.container-componentes .container-galeria .amd {
   grid-area: amd;
 }
-
-.intel {
+.container-componentes .container-galeria .intel {
   grid-area: intel;
 }
-
-.giga {
+.container-componentes .container-galeria .giga {
   grid-area: giga;
 }
-
-.aorus {
+.container-componentes .container-galeria .aorus {
   grid-area: aorus;
 }
-
-.nvidia {
+.container-componentes .container-galeria .nvidia {
   grid-area: nvidia;
 }
-
-.container-parrafo-componentes {
+.container-componentes .container-parrafo-componentes {
   width: 85%;
+  height: auto;
   padding: 20px;
 }
-
-.container-parrafo-componentes p {
+.container-componentes .container-parrafo-componentes p {
   font-size: 24px;
 }
 
 .container-tienda {
-  background-color: var(--color__three);
+  background-color: #eeeeee;
 }
-
-.aside-tienda {
+.container-tienda .aside-tienda {
   display: flex;
   flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
   gap: 30px;
 }
-
-.container-filtro ul {
+.container-tienda .aside-tienda .container-filtro ul {
   list-style: none;
 }
-
-.h4-filtro {
+.container-tienda .aside-tienda .container-filtro ul li .h4-filtro {
   color: #777;
 }
-
-.container-cards-tienda {
+.container-tienda .container-items-tienda .container-cards-tienda {
   justify-content: space-evenly;
 }
-
-.card-tienda-pc {
-  transition: all 0.3s ease;
+.container-tienda .container-items-tienda .container-cards-tienda .card-tienda-pc {
+  transition: all 0.4s ease;
 }
-
-.card-tienda-pc:hover {
+.container-tienda .container-items-tienda .container-cards-tienda .card-tienda-pc:hover {
   border: 1px #333 solid;
-}
-
-.btn-info-card {
-  background-color: #0e91e9;
-  color: #fff;
-  justify-self: flex-end;
-}
-
-.btn-info-card:hover {
-  background-color: #0d83d2;
+  border-radius: auto;
 }
 
 .container-texto-nosotros {
   display: flex;
   flex-direction: column;
-  background-color: var(--color__three);
-}
-
-.texto-nosotros {
-  padding: 20px;
-}
-
-.texto-nosotros h2 {
-  font-size: 30px;
-  color: #000;
-}
-
-.texto-nosotros p {
-  font-size: 24px;
-}
-
-.container-img-article {
-  width: 100%;
-}
-
-.container-img-article img {
-  width: 100%;
-  border-radius: 1em;
-  border: 2px #222 solid;
+  background-color: #eeeeee;
 }
 
 .container-texto2-nosotros {
   display: flex;
   flex-direction: column;
-  background-color: var(--color__two);
+  justify-content: auto;
+  align-items: auto;
+  gap: 0;
+  background-color: #32e0c4;
+}
+
+.texto-nosotros {
+  padding: 20px;
+}
+.texto-nosotros h2 {
+  font-size: 32px;
+  color: #222831;
+}
+.texto-nosotros p {
+  font-size: 24px;
+}
+.texto-nosotros .container-img-article {
+  width: 100%;
+  height: auto;
+}
+.texto-nosotros .container-img-article img {
+  width: 100%;
+  height: auto;
+  border: 2px #222831 solid;
+  border-radius: 1em;
 }
 
 /*992 PIXELES*/

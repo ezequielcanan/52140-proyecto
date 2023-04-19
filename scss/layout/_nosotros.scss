@@ -1,34 +1,32 @@
 .container-texto-nosotros {
     display: flex;
     flex-direction: column;
-    background-color: var(--color__three);
+    background-color: $bg-light;
+}
+
+.container-texto2-nosotros {
+    @include flex-column();
+    background-color: $bg-green;
 }
 
 .texto-nosotros {
     padding: 20px;
-}
 
-.texto-nosotros h2 {
-    font-size: 30px;
-    color: #000;
-}
+    h2 {
+        font-size: $lg;
+        color: $bg-dark;
+    }
 
-.texto-nosotros p {
-    font-size: 24px;
-}
+    p {
+        font-size: $md;
+    }
 
-.container-img-article {
-    width: 100%;
-}
+    .container-img-article {
+        @include size(100%);
 
-.container-img-article img{
-    width: 100%;
-    border-radius: 1em;
-    border: 2px #222 solid;
-}
-
-.container-texto2-nosotros {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color__two);
+        img {
+            @include size(100%);
+            @include border(2px, $bg-dark, 1em);
+        }
+    }
 }

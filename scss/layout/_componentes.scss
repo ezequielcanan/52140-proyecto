@@ -1,69 +1,59 @@
 .container-componentes {
-    display: flex;
-    flex-direction: column;;
-    align-items: center;
-    background-color: #dfdfdf;
-}
-
-.container-galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-    grid-template-areas: 
-    "asus asus amd"
-    "intel giga giga"
-    "nvidia nvidia aorus";
-}
-
-.container-img-marca {
-    width: 100%;
-    min-height: 400px;
-    max-height: 100%;
-}
-
-.img-marca {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    filter: grayscale(85%);
-    transition: all .5s ease;
-    border-radius: .5em;
-}
-
-.img-marca:hover {
-    filter: grayscale(0);
-}
-
-.asus {
-    grid-area: asus;
-}
-
-.amd {
-    grid-area: amd;
-}
-
-.intel {
-    grid-area: intel;
-}
-
-.giga {
-    grid-area: giga;
-}
-
-.aorus {
-    grid-area: aorus;
-}
-
-.nvidia {
-    grid-area: nvidia;
-}
-
-.container-parrafo-componentes {
-    width: 85%;
-    padding: 20px;
-}
-
-.container-parrafo-componentes p{
-    font-size: 24px;
+    @include flex-column($align:center);
+    background-color: $bg-light;
+    .container-galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "asus asus amd"
+        "intel giga giga"
+        "nvidia nvidia aorus";
+        .container-img-marca {
+            @include size(100%);
+            min-height: 400px;
+            max-height: 100%;
+            .img-marca {
+                object-fit: cover;
+                @include size(100%, 100%);
+                filter: grayscale(85%);
+                transition: all $sec-md ease;
+                border-radius: .5em;
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+        .asus {
+            grid-area: asus;
+        }
+        
+        .amd {
+            grid-area: amd;
+        }
+        
+        .intel {
+            grid-area: intel;
+        }
+        
+        .giga {
+            grid-area: giga;
+        }
+        
+        .aorus {
+            grid-area: aorus;
+        }
+        
+        .nvidia {
+            grid-area: nvidia;
+        }
+    }
+    .container-parrafo-componentes {
+        @include size(85%);
+        padding: 20px;
+        p {
+            font-size: $md;
+        }
+    }
 }

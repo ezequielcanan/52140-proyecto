@@ -4,7 +4,7 @@
     }
 }
 
-@mixin flex-column($justify, $align:auto, $gap:0) {
+@mixin flex-column($justify:auto, $align:auto, $gap:0) {
     display: flex;
     flex-direction: column;
     justify-content: $justify;
