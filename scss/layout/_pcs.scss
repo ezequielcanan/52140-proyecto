@@ -1,11 +1,11 @@
-.container-tienda {
+.container__tienda {
     background-color: $bg-light;
 
-    .aside-tienda {
+    &__aside {
         @include flex-column($gap:30px);
 
-        .container-filtro {
-            ul {
+        &__filtro {
+            &__ul {
                 list-style: none;
 
                 li {
@@ -16,12 +16,12 @@
             }
         }
     }
-    .container-items-tienda {
+    .container__tienda__items {
         
-        .container-cards-tienda {
+        &__cards {
             justify-content: space-evenly;
 
-            .card-tienda-pc {
+            &__card {
                 transition: all $sec-md ease;
                 &:hover {
                     @include border(1px, $bg-d-gray);

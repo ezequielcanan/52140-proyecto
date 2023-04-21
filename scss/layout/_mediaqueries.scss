@@ -222,5 +222,53 @@
             height: auto;
         }
     }
+
+    /*Componentes*/
+    .container-galeria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "asus aorus"
+        "giga giga"
+        "intel amd"
+        "nvidia nvidia";
+    }
+
+    .img-marca {
+        filter: grayscale(0);
+    }
+
+    /*PCS*/
+    .aside-tienda {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "titulo titulo titulo"
+        "cpu mother ram";
+        justify-items: center;
+        align-content: center;
+        padding-bottom: 30px;
+    }
+
+    .container-filtro ul{
+        padding: 0;
+    }
+
+    .container-header-aside {
+        grid-area: titulo;
+    }
+
+    .cpu-filtro {
+        grid-area: cpu;
+    }
+
+    .mother-filtro {
+        grid-area: mother;
+    }
+
+    .ram-filtro {
+        grid-area: ram;
+    } 
 }
 

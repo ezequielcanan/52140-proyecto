@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Base*/
-@import url("https://fonts.googleapis.com/css2?family=Golos+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 /*Colores*/
 /*Fuente*/
 /*Tamaños*/
@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Golos-text", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /*Buttons*/
@@ -146,23 +146,24 @@ footer .seccion-footer .redes-botones a i:hover {
 }
 
 /*Layout*/
-.section-two {
+.container__two {
   background-color: #eeeeee;
   margin: 0;
 }
-.section-two .container-cards-pcs {
+.container__two__cards {
   justify-content: space-around;
   padding: 32px;
   margin: 0;
 }
-.section-two .container-cards-pcs .card-inicio-pc {
+.container__two__cards__card-inicio {
+  padding: 10px;
   transition: all 0.4s ease;
 }
-.section-two .container-cards-pcs .card-inicio-pc:hover {
+.container__two__cards__card-inicio:hover {
   border: 1px #333 solid;
   border-radius: auto;
 }
-.section-two .container__puntos {
+.container__two__puntos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1;
@@ -170,7 +171,7 @@ footer .seccion-footer .redes-botones a i:hover {
   align-items: center;
   padding: 20px;
 }
-.section-two .container__puntos__punto {
+.container__two__puntos__punto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -183,17 +184,17 @@ footer .seccion-footer .redes-botones a i:hover {
   border-radius: 50%;
   transition: all 0.4s ease;
 }
-.section-two .container__puntos__punto:hover {
+.container__two__puntos__punto:hover {
   border-color: #1b9fb6;
 }
-.section-two .container__puntos__punto i {
+.container__two__puntos__punto__icon {
   color: #333;
   font-size: 18px;
   border: 1px #333 solid;
   border-radius: 50%;
   padding: 7px;
 }
-.section-two .container__puntos__punto h3 {
+.container__two__puntos__punto__titulo {
   font-size: 24px;
   color: #333;
   border-bottom: 2px #333 solid;
@@ -201,7 +202,7 @@ footer .seccion-footer .redes-botones a i:hover {
   text-align: center;
   width: 80%;
 }
-.section-two .container__puntos__punto p {
+.container__two__puntos__punto__parrafo {
   color: #333;
   font-size: 14px;
   text-align: center;
@@ -210,41 +211,40 @@ footer .seccion-footer .redes-botones a i:hover {
 .main-form {
   padding: 0;
 }
-.main-form .container-forms {
+.main-form .container__form {
   justify-content: center;
   align-items: center;
   background-color: #eeeeee;
   padding: 30px;
   margin: 0;
 }
-.main-form .container-forms .icon-envelope {
+.main-form .container__form__icon {
   font-size: 270px;
   text-align: center;
   color: #0e91e9;
 }
-.main-form .container-forms .container-input-forms {
+.main-form .container__form__inputs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: auto;
   gap: 0;
-  align-content: flex-start;
 }
-.main-form .container-forms .container-input-forms .lista-form {
+.main-form .container__form__inputs__lista {
   list-style: none;
   padding: 0;
 }
-.main-form .container-forms .container-input-forms .lista-form .form-control {
+.main-form .container__form__inputs__lista__input {
   width: 80%;
   height: auto;
   transition: all 0.3s ease;
 }
-.main-form .container-forms .container-input-forms .lista-form .form-control:focus {
+.main-form .container__form__inputs__lista__input:focus {
   box-shadow: 4px 4px 5px 0px #10af97;
   border-color: #10af97;
 }
 
-.container-componentes {
+.container__componentes {
   display: flex;
   flex-direction: column;
   justify-content: auto;
@@ -252,20 +252,20 @@ footer .seccion-footer .redes-botones a i:hover {
   gap: 0;
   background-color: #eeeeee;
 }
-.container-componentes .container-galeria {
+.container__componentes__galeria {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   grid-template-areas: "asus asus amd" "intel giga giga" "nvidia nvidia aorus";
 }
-.container-componentes .container-galeria .container-img-marca {
+.container__componentes__galeria__container__img {
   width: 100%;
   height: auto;
   min-height: 400px;
   max-height: 100%;
 }
-.container-componentes .container-galeria .container-img-marca .img-marca {
+.container__componentes__galeria__container__img__img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -273,70 +273,87 @@ footer .seccion-footer .redes-botones a i:hover {
   transition: all 0.4s ease;
   border-radius: 0.5em;
 }
-.container-componentes .container-galeria .container-img-marca .img-marca:hover {
+.container__componentes__galeria__container__img__img:hover {
   filter: grayscale(0);
 }
-.container-componentes .container-galeria .asus {
+.container__componentes__galeria__container__img-asus {
   grid-area: asus;
 }
-.container-componentes .container-galeria .amd {
+.container__componentes__galeria__container__img-amd {
   grid-area: amd;
 }
-.container-componentes .container-galeria .intel {
+.container__componentes__galeria__container__img-intel {
   grid-area: intel;
 }
-.container-componentes .container-galeria .giga {
+.container__componentes__galeria__container__img-giga {
   grid-area: giga;
 }
-.container-componentes .container-galeria .aorus {
+.container__componentes__galeria__container__img-aorus {
   grid-area: aorus;
 }
-.container-componentes .container-galeria .nvidia {
+.container__componentes__galeria__container__img-nvidia {
   grid-area: nvidia;
 }
-.container-componentes .container-parrafo-componentes {
+.container__componentes__parrafo {
   width: 85%;
   height: auto;
   padding: 20px;
 }
-.container-componentes .container-parrafo-componentes p {
+.container__componentes__parrafo__p {
   font-size: 24px;
 }
 
-.container-tienda {
+.container__tienda {
   background-color: #eeeeee;
 }
-.container-tienda .aside-tienda {
+.container__tienda__aside {
   display: flex;
   flex-direction: column;
   justify-content: auto;
   align-items: auto;
   gap: 30px;
 }
-.container-tienda .aside-tienda .container-filtro ul {
+.container__tienda__aside__filtro__ul {
   list-style: none;
 }
-.container-tienda .aside-tienda .container-filtro ul li .h4-filtro {
+.container__tienda__aside__filtro__ul li .h4-filtro {
   color: #777;
 }
-.container-tienda .container-items-tienda .container-cards-tienda {
+.container__tienda .container__tienda__items__cards {
   justify-content: space-evenly;
 }
-.container-tienda .container-items-tienda .container-cards-tienda .card-tienda-pc {
+.container__tienda .container__tienda__items__cards__card {
   transition: all 0.4s ease;
 }
-.container-tienda .container-items-tienda .container-cards-tienda .card-tienda-pc:hover {
+.container__tienda .container__tienda__items__cards__card:hover {
   border: 1px #333 solid;
   border-radius: auto;
 }
 
-.container-texto-nosotros {
+.container__texto-nosotros {
   display: flex;
   flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 0;
   background-color: #eeeeee;
 }
+.container__texto-nosotros h1 {
+  font-size: 40px;
+  color: #222831;
+}
+.container__texto-nosotros__img {
+  width: 100%;
+  height: auto;
+}
+.container__texto-nosotros__img img {
+  width: 100%;
+  height: auto;
+  border: 2px #222831 solid;
+  border-radius: 1em;
+}
 
-.container-texto2-nosotros {
+.container__texto2-nosotros {
   display: flex;
   flex-direction: column;
   justify-content: auto;
@@ -348,22 +365,8 @@ footer .seccion-footer .redes-botones a i:hover {
 .texto-nosotros {
   padding: 20px;
 }
-.texto-nosotros h2 {
-  font-size: 32px;
-  color: #222831;
-}
 .texto-nosotros p {
   font-size: 24px;
-}
-.texto-nosotros .container-img-article {
-  width: 100%;
-  height: auto;
-}
-.texto-nosotros .container-img-article img {
-  width: 100%;
-  height: auto;
-  border: 2px #222831 solid;
-  border-radius: 1em;
 }
 
 /*992 PIXELES*/
@@ -421,6 +424,40 @@ footer .seccion-footer .redes-botones a i:hover {
   /*Contacto*/
   .main-form .container-forms {
     height: auto;
+  }
+  /*Componentes*/
+  .container-galeria {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "asus aorus" "giga giga" "intel amd" "nvidia nvidia";
+  }
+  .img-marca {
+    filter: grayscale(0);
+  }
+  /*PCS*/
+  .aside-tienda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "titulo titulo titulo" "cpu mother ram";
+    justify-items: center;
+    align-content: center;
+    padding-bottom: 30px;
+  }
+  .container-filtro ul {
+    padding: 0;
+  }
+  .container-header-aside {
+    grid-area: titulo;
+  }
+  .cpu-filtro {
+    grid-area: cpu;
+  }
+  .mother-filtro {
+    grid-area: mother;
+  }
+  .ram-filtro {
+    grid-area: ram;
   }
 }
 

@@ -1,28 +1,27 @@
 .main-form {
     padding: 0;
     
-    .container-forms {
+    .container__form {
         justify-content: center;
         align-items: center;
         background-color: $bg-light;
         padding: 30px;
         margin: 0;
         
-        .icon-envelope {
+        &__icon {
             font-size: 270px;
             text-align: center;
             color: $bg-blue;
         }
         
-        .container-input-forms {
+        &__inputs {
             @include flex-column(center);
-            align-content: flex-start;
             
-            .lista-form {
+            &__lista {
                 list-style: none;
                 padding: 0;
                 
-                .form-control {
+                &__input {
                     @include size(80%);
                     transition: all .3s ease;
                     &:focus {

@@ -1,32 +1,29 @@
-.container-texto-nosotros {
-    display: flex;
-    flex-direction: column;
-    background-color: $bg-light;
-}
-
-.container-texto2-nosotros {
+.container__texto-nosotros {
     @include flex-column();
-    background-color: $bg-green;
-}
-
-.texto-nosotros {
-    padding: 20px;
-
-    h2 {
-        font-size: $lg;
+    background-color: $bg-light;
+    h1 {
+        font-size: $xl;
         color: $bg-dark;
     }
 
-    p {
-        font-size: $md;
-    }
-
-    .container-img-article {
+    &__img {
         @include size(100%);
 
         img {
             @include size(100%);
             @include border(2px, $bg-dark, 1em);
         }
+    }
+}
+
+.container__texto2-nosotros {
+    @include flex-column();
+    background-color: $bg-green;
+}
+
+.texto-nosotros {
+    padding: 20px;
+    p {
+        font-size: $md;
     }
 }

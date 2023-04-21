@@ -1,20 +1,21 @@
-.section-two {
+.container__two {
     background-color: $bg-light;
     margin: 0;
     
-    .container-cards-pcs {
+    &__cards {
         justify-content: space-around;
         padding: $lg;
         margin: 0;
         
-        .card-inicio-pc {
+        &__card-inicio {
+            padding: 10px;
             transition: all $sec-md ease;
             &:hover {
                 @include border(1px, $bg-d-gray);
             }
         }
     }
-    .container__puntos {
+    &__puntos {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 1;
@@ -32,14 +33,14 @@
                 border-color: $bg-l-blue;
             }
             
-            i {
+            &__icon {
                 color: $bg-d-gray;
                 font-size: $sm;
                 @include border(1px,$bg-d-gray,50%);
                 padding: 7px;
             }
             
-            h3 {
+            &__titulo {
                 font-size: $md;
                 color: $bg-d-gray;
                 @include border(2px,$bg-d-gray,$lados: bottom);
@@ -47,7 +48,7 @@
                 width: 80%;
             }
             
-            p {
+            &__parrafo {
                 color: $bg-d-gray;
                 font-size: $xs;
                 text-align: center;
