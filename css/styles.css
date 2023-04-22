@@ -105,16 +105,63 @@ footer ul {
 footer ul .no-link {
   color: #32e0c4;
 }
-footer .seccion-logo .logo-footer {
-  width: 124px;
-  height: 124px;
-  border-radius: 1.5em;
+footer .seccion-logo .container-animated-card {
+  animation-name: logo-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  width: 150px;
+  height: 150px;
+  position: relative;
 }
-footer .seccion-logo ul {
-  padding-top: 20px;
+footer .seccion-logo .container-animated-card:hover {
+  animation: none;
 }
-footer .seccion-logo ul li {
+footer .seccion-logo .container-animated-card:hover .front-card {
+  transform: rotateZ(180deg) rotateY(180deg);
+}
+footer .seccion-logo .container-animated-card:hover .back-card {
+  transform: rotateZ(360deg) rotateY(360deg);
+}
+footer .seccion-logo .container-animated-card .card-side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: all 0.4s linear;
+  border-radius: 1em;
+}
+footer .seccion-logo .container-animated-card .front-card {
+  transform: rotateZ(0deg) rotateY(0deg);
+}
+footer .seccion-logo .container-animated-card .front-card .logo-footer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+footer .seccion-logo .container-animated-card .back-card {
+  transform: rotateZ(180deg) rotateY(180deg);
+  padding: 10px;
+  background: linear-gradient(45deg, #32e0c4, #0e91e9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+footer .seccion-logo .container-animated-card .back-card ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .seccion-logo .container-animated-card .back-card ul li {
+  text-align: center;
   color: #32e0c4;
+  font-size: 14px;
+  color: #222831;
 }
 footer .seccion-footer {
   display: flex;
@@ -145,6 +192,17 @@ footer .seccion-footer .redes-botones a i:hover {
   color: #0e91e9;
 }
 
+@keyframes logo-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*Layout*/
 .container__two {
   background-color: #eeeeee;
@@ -391,9 +449,6 @@ footer .seccion-footer .redes-botones a i:hover {
   footer .seccion-footer h4 {
     align-self: center;
   }
-  footer .seccion-footer ul li {
-    text-align: center;
-  }
   footer .seccion-footer .categorias-footer {
     grid-area: categorias;
   }
@@ -407,35 +462,31 @@ footer .seccion-footer .redes-botones a i:hover {
     grid-area: redes;
   }
   /*Index*/
-  .section-two .container__puntos {
+  .container__two .container__puntos {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "garantia service" "calidad calidad";
   }
-  .section-two .container__puntos .garantia {
+  .container__two .container__puntos .garantia {
     grid-area: garantia;
   }
-  .section-two .container__puntos .service {
+  .container__two .container__puntos .service {
     grid-area: service;
   }
-  .section-two .container__puntos .calidad {
+  .container__two .container__puntos .calidad {
     grid-area: calidad;
   }
-  /*Contacto*/
-  .main-form .container-forms {
-    height: auto;
-  }
   /*Componentes*/
-  .container-galeria {
+  .container__componentes__galeria {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas: "asus aorus" "giga giga" "intel amd" "nvidia nvidia";
   }
-  .img-marca {
+  .container__componentes__galeria__container__img__img {
     filter: grayscale(0);
   }
   /*PCS*/
-  .aside-tienda {
+  .container__tienda__aside {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -444,20 +495,76 @@ footer .seccion-footer .redes-botones a i:hover {
     align-content: center;
     padding-bottom: 30px;
   }
-  .container-filtro ul {
-    padding: 0;
-  }
-  .container-header-aside {
+  .container__tienda__aside__header {
     grid-area: titulo;
   }
-  .cpu-filtro {
-    grid-area: cpu;
-  }
-  .mother-filtro {
+  .container__tienda__aside__filtro-mother {
     grid-area: mother;
   }
-  .ram-filtro {
+  .container__tienda__aside__filtro-cpu {
+    grid-area: cpu;
+  }
+  .container__tienda__aside__filtro-ram {
     grid-area: ram;
+  }
+}
+@media screen and (max-width: 767px) {
+  /*Navbar*/
+  .navbar-expand-md .navbar-collapse .navbar-nav {
+    gap: 0;
+  }
+  /*Contacto*/
+  .container__form__inputs__button {
+    align-self: flex-end;
+  }
+  .main-form .container__form__inputs__lista__input {
+    width: 100%;
+  }
+  /*TIENDA PCS*/
+  .container__tienda__aside {
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "cpu" "mother" "ram";
+  }
+  .texto-nosotros h2 {
+    font-size: 24px;
+  }
+  .texto-nosotros p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container__two__puntos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "garantia" "service" "calidad";
+    gap: 30px;
+  }
+  /*CONTACTO*/
+  .main-form .container__form__icon {
+    font-size: 200px;
+  }
+  /*COMPONENTES*/
+  .container__componentes__galeria {
+    grid-template-columns: 1fr;
+    grid-template-areas: "asus" "aorus" "giga" "intel" "amd" "nvidia";
+  }
+  .container__componentes__parrafo__p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+    grid-template-areas: "logo" "categorias" "marcas" "contacto" "redes";
+  }
+  /*CONTACTO*/
+  .main-form .container__form__icon {
+    font-size: 150px;
+  }
+  .main-form .container__form__inputs__button {
+    align-self: center;
   }
 }
 

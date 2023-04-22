@@ -1,153 +1,3 @@
-
-// /*COMPONENTES*/
-
-// .container-galeria {
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-template-rows: auto;
-//     grid-template-areas: 
-//     "asus aorus"
-//     "giga giga"
-//     "intel amd"
-//     "nvidia nvidia";
-// }
-
-// .img-marca {
-//     filter: grayscale(0);
-// }
-
-// /*TIENDA PCS*/
-
-// .aside-tienda {
-//     display: grid;
-//     grid-template-columns: repeat(3,1fr);
-//     grid-template-rows: auto;
-//     grid-template-areas: 
-//     "titulo titulo titulo"
-//     "cpu mother ram";
-//     justify-items: center;
-//     align-content: center;
-//     padding-bottom: 30px;
-// }
-
-// .container-filtro ul{
-//     padding: 0;
-// }
-
-// .container-header-aside {
-//     grid-area: titulo;
-// }
-
-// .cpu-filtro {
-//     grid-area: cpu;
-// }
-
-// .mother-filtro {
-//     grid-area: mother;
-// }
-
-// .ram-filtro {
-//     grid-area: ram;
-// }
-
-
-// /*767px de max-width para que el navbar no tenga mal diseño en el pixel exacto 768*/
-// @media screen and (max-width: 767px) {
-//     .navbar-nav {
-//         gap: 0;
-//     }
-    
-//     .boton-enviar {
-//         align-self: flex-end;
-//     }
-    
-//     .form-control {
-//         width: 100%;
-//     }
-    
-//     /*TIENDA PCS*/
-    
-//     .aside-tienda {
-//         grid-template-columns: 1fr;
-//         grid-template-areas: 
-//         "titulo"
-//         "cpu"
-//         "mother"
-//         "ram";
-//     }
-    
-//     /*NOSOTROS*/
-    
-//     .texto-nosotros h2 {
-//         font-size: 24px;
-//     }
-    
-//     .texto-nosotros p {
-//         font-size: 18px;
-//     }
-    
-// }
-
-// @media screen and (max-width: 600px) {
-    
-//     .container__puntos {
-//         grid-template-columns: 1fr;
-//         grid-template-rows: repeat(3,1fr);
-//         grid-template-areas: 
-//         "garantia"
-//         "service"
-//         "calidad";
-//         gap: 30px;
-//     }
-    
-//     /*CONTACTO*/
-//     .icon-envelope {
-//         font-size: 200px;
-//     }
-    
-//     /*COMPONENTES*/
-    
-//     .container-galeria {
-//         grid-template-columns: 1fr;
-//         grid-template-areas: 
-//         "asus"
-//         "aorus"
-//         "giga"
-//         "intel"
-//         "amd"
-//         "nvidia";
-//     }
-    
-//     .container-parrafo-componentes p{
-//         font-size: 18px;
-//     }
-    
-// }
-
-// @media screen and (max-width: 480px) {
-//     footer {
-//         grid-template-columns: 1fr;
-//         grid-template-rows: auto;
-//         align-content: center;
-//         grid-template-areas: 
-//         "logo"
-//         "categorias"
-//         "marcas"
-//         "contacto"
-//         "redes";
-//     }
-    
-//     /*CONTACTO*/
-//     .icon-envelope {
-//         font-size: 150px;
-//     }
-    
-//     .boton-enviar {
-//         align-self: center;
-//     }
-    
-// }
-
-
 /*992 PIXELES*/
 @include media-query(large) {
     /*Footer*/
@@ -175,11 +25,6 @@
             h4 {
                 align-self: center;
             }
-            ul {
-                li {
-                    text-align: center;
-                }
-            }
             .categorias-footer {
                 grid-area: categorias;
             }
@@ -194,9 +39,9 @@
             }
         }
     }
-
+    
     /*Index*/
-    .section-two {
+    .container__two {
         .container__puntos {
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(2,1fr);
@@ -216,59 +61,169 @@
             }
         }
     }
-    /*Contacto*/
-    .main-form {
-        .container-forms {
-            height: auto;
+    /*Componentes*/
+    .container__componentes {
+        &__galeria {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "asus aorus"
+            "giga giga"
+            "intel amd"
+            "nvidia nvidia";
+            &__container__img {
+                &__img {
+                    filter: grayscale(0);
+                }
+            }
         }
     }
-
-    /*Componentes*/
-    .container-galeria {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "asus aorus"
-        "giga giga"
-        "intel amd"
-        "nvidia nvidia";
-    }
-
-    .img-marca {
-        filter: grayscale(0);
-    }
-
+    
     /*PCS*/
-    .aside-tienda {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "titulo titulo titulo"
-        "cpu mother ram";
-        justify-items: center;
-        align-content: center;
-        padding-bottom: 30px;
+    .container__tienda {
+        &__aside {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "titulo titulo titulo"
+            "cpu mother ram";
+            justify-items: center;
+            align-content: center;
+            padding-bottom: 30px;
+            
+            &__header {
+                grid-area: titulo;
+            }
+            
+            &__filtro {
+                &-mother {
+                    grid-area: mother;
+                }
+                &-cpu {
+                    grid-area: cpu;
+                }
+                &-ram {
+                    grid-area: ram;
+                }
+            }
+        }
     }
-
-    .container-filtro ul{
-        padding: 0;
-    }
-
-    .container-header-aside {
-        grid-area: titulo;
-    }
-
-    .cpu-filtro {
-        grid-area: cpu;
-    }
-
-    .mother-filtro {
-        grid-area: mother;
-    }
-
-    .ram-filtro {
-        grid-area: ram;
-    } 
 }
 
+@include media-query(medium) {
+    /*Navbar*/
+    .navbar-expand-md {
+        .navbar-collapse {
+            .navbar-nav {
+                gap: 0;
+            }
+        }
+    }
+    
+    /*Contacto*/
+    .container__form__inputs__button {
+        align-self: flex-end;
+    }
+    .main-form {
+        .container__form {
+            &__inputs {
+                &__lista {
+                    &__input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+    /*TIENDA PCS*/
+    
+    .container__tienda {
+        &__aside {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "titulo"
+            "cpu"
+            "mother"
+            "ram";
+        }
+    }
+    
+    .texto-nosotros {
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+@include media-query(small) {
+    .container__two {
+        &__puntos {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-areas: 
+            "garantia"
+            "service"
+            "calidad";
+            gap: 30px;
+        }
+    }
+    
+    /*CONTACTO*/
+    .main-form {
+        .container__form {
+            &__icon {
+                font-size: 200px;
+            }
+        }
+    }
+    /*COMPONENTES*/
+    
+    .container__componentes {
+        &__galeria {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "asus"
+            "aorus"
+            "giga"
+            "intel"
+            "amd"
+            "nvidia";
+        }
+        &__parrafo {
+            &__p {
+                font-size: $sm;
+            }
+        }
+    }
+}
+
+@include media-query(xsmall) {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-content: center;
+        grid-template-areas: 
+        "logo"
+        "categorias"
+        "marcas"
+        "contacto"
+        "redes";
+    }
+    
+    /*CONTACTO*/
+    .main-form {
+        .container__form {
+            &__icon {
+                font-size: 150px;
+            }
+            &__inputs__button {
+                align-self: center;
+            }
+        }
+    }
+}
